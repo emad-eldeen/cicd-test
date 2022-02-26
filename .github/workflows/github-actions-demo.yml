@@ -4,12 +4,14 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-20.04
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
-        with:
-          repository: google/mediapipe
-          # version 0.8.9
-          ref: e6c19885c6d3c6f410c730952aeed2852790d306
+#       - name: Check out repository code
+#         uses: actions/checkout@v2
+#         with:
+#           repository: google/mediapipe
+#           # version 0.8.9
+#           ref: e6c19885c6d3c6f410c730952aeed2852790d306
+      - name: My first step
+        uses: docker://neccam/mediapipe:latest
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
